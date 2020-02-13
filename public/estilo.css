@@ -4,6 +4,7 @@ body,html{
     height: 100%;
     font-family: "montserrat",sans-serif;
     font-size: large;
+    box-sizing: border-box;
   }
   .header{
     height: 100px;
@@ -61,9 +62,92 @@ body,html{
     align-items: center;
     justify-content: center;
   }
-  
+  .contact-section{
+    background-image: url(./Fundo_Login.jpg);
+    background-size:cover;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inner-width{
+    background-color: #fff;
+    height: 500px;
+    max-width: 600px;
+    margin:0 auto;
+    padding: 10px 20px;
+    border-radius: 7%;
+  }
+  .inner-width img{
+    margin:20px;
+    height: 70px;
+    width: 200px;
+  }
+  .Button-submit{
+    display:block;
+    margin: 50px auto 0;
+  }
+  .Content-div{
+    display:flex;
+    align-items: center;
+  }
+  .contact-section h1{
+    font-size: large;
+    color: #2980b9;
+    margin-bottom:40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+  }
+
+  .password,.email{
+    background: none;
+    border:none;
+    border-bottom:1px solid;
+    color:#2980b9;
+    padding: 10px 6px;
+    margin:0 auto;
+    font-size: medium;
+    margin-bottom:40px;
+    display: block;
+  }
+
+  .password{
+    width:270px;
+  }
+
+  .email{
+    width: 270px;
+  }
+
+  .contact-section button{
+    background-color:#2980b9;
+    color:#fff;
+    border: 1px solid #70a1ff;
+    padding:15px 100px;
+    border-radius:8px;
+    text-transform: uppercase;
+    font-size:14px;
+    font-weight: bold;
+    transition:0.4s linear;
+    cursor: pointer;
+  }
+
+  .contact-section button:hover{
+    background:none;
+    color:#2980b9;
+  }
+
+  .contact-section a{
+    text-decoration: none;
+    color:#7f8c8d;
+    font-size: medium;
+    margin:15px;
+  }
   footer{
-    background: #f1f1f1;
+    background: #ced6e0;
     padding: 50px 0;
  
   }
@@ -87,20 +171,9 @@ body,html{
     height: 4px;
     background: #40739e;
   }
-  
-  @media screen and (max-width:960px) {
-    .footer-container{
-      max-width: 600px;
-    }
-    
-    .center-col{
-      width: 100%;
-      text-align: center;
-    }
-  }
-  
-  
-  @media screen and (max-width:800px) {
+
+
+ @media screen and (max-width:800px) {
     .show-menu-btn,.hide-menu-btn{
       display: flex;
     }
@@ -132,4 +205,23 @@ body,html{
       right: 0;
     }
   }
+  @media screen and (max-width:960px) {
+    .footer-container{
+      max-width: 600px;
+    }
+    
+    .center-col{
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width:600px){
+    /* .password,.email{
+      width:100%;
+    } */
+    
+  }
+  
+ 
   
