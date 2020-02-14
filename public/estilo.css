@@ -6,62 +6,132 @@ body,html{
     font-size: large;
     box-sizing: border-box;
   }
-  .header{
-    height: 100px;
-    background: #40739e;
-    padding: 0 20px;
-    color: #fff;
+
+  .landing-page{
+    width: 100%;
+    height: 700px;
+    background: rgb(14, 46, 83);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
   }
-  .logo{
-    line-height: 60px;
-    float: left;
-    text-transform: uppercase;
-  }
-  
-  .menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    line-height: 100px;
-  }
-  .menu a{
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 0 10px;
-    transition: 0.4s;
-  }
-  .show-menu-btn,.hide-menu-btn{
-    display: flex;
-    justify-content: right;
-    transition: 0.4s;
-    font-size: 30px;
-    cursor: pointer;
-    display: none;;
+  .landing-page::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./parallax-image.jpg) no-repeat;
+    background-size: cover;
+    opacity: .3;
+    animation: animation 25s linear infinite;
   }
  
-  .show-menu-btn i{
-    line-height: 100px;
-  }
-  .menu a:hover,
-  .show-menu-btn:hover,
-  .hide-menu-btn:hover{
-    color: #192a56;
-  }
-  
-  #chk{
-    position: absolute;
-    visibility: hidden;
-    z-index: -1111;
-  }
-   
   .page-content{
-    min-height: 100vh;
-    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  .page-content img{
+    height: 150px;
+    width: 700px;
+    margin-bottom: 20px;
+  }
+  .page-content p,a{
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .button-sign{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    transition: 0.4s linear;
+  }
+
+  .button-sign:hover{
+    color: #fff;
+    background: #0a3d62;
+  }
+  .text{
+    padding: 10px;
+    text-align: justify;
+  }
+  .services-section{
+    padding: 60px 0;
+  }
+  .inner-width-primary{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+  .section-title{
+    text-align: center;
+    color: #0a3d62;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  .border-primary{
+    width: 160px;
+    height: 2px;
+    background: #0a3d62;
+    margin: 40px auto;
+  }
+  .services-container{
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
   }
+  
+  .service-box{
+    max-width: 33.33%;
+    padding: 10px;
+    text-align: center;
+    color: #0a3d62;
+    cursor: pointer;
+  }
+  
+  .service-icon{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid #0a3d62;
+    color: #0a3d62;
+    transform: rotate(45deg);
+    margin-bottom: 30px;
+    margin-top: 16px;
+    transition: 0.3s linear;
+  }
+  .service-icon i{
+    line-height: 70px;
+    transform: rotate(-45deg);
+    font-size: 26px;
+  }
+  .service-box:hover .service-icon{
+    background: #0a3d62;
+    color: #ddd;
+  }
+  .service-title{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .service-desc{
+    font-size: normal;
+  }
+  
   .contact-section{
     background-image: url(./Fundo_Login.jpg);
     background-size:cover;
@@ -85,11 +155,11 @@ body,html{
     height: 70px;
     width: 200px;
   }
-  .Button-submit{
+  .button-submit{
     display:block;
     margin: 50px auto 0;
   }
-  .Content-div{
+  .content-div{
     display:flex;
     align-items: center;
   }
@@ -149,9 +219,8 @@ body,html{
   footer{
     background: #ced6e0;
     padding: 50px 0;
- 
   }
-  
+ 
   .footer-container{
     max-width: 600px;
     margin: auto;
@@ -167,45 +236,24 @@ body,html{
   }
   
   .border{
-    width: 140px;
-    height: 4px;
-    background: #40739e;
+    width: 160px;
+    height: 2px;
+    background: #0a3d62;
   }
 
-
- @media screen and (max-width:800px) {
-    .show-menu-btn,.hide-menu-btn{
-      display: flex;
+  @keyframes animation {
+    50%{
+      transform: scale(2);
     }
-    .menu{
-      position: fixed;
-      width: 100%;
-      height: 400px;
-      flex-direction: column;
-      background: #40739e;
-      right: -100%;
-      top: 0;
-      text-align: center;
-      padding: 80px 0;
-      line-height: normal;
-      transition: 0.7s;
-    }
-    .menu a{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .hide-menu-btn{
-        position: absolute;
-        top: 40px;
-        right: 20px;
-    }
-    #chk:checked ~ .menu{
-      right: 0;
+    100%{
+      transform: scale(1);
     }
   }
+  
   @media screen and (max-width:960px) {
+    .service-box{
+      max-width: 45%;
+    }
     .footer-container{
       max-width: 600px;
     }
@@ -214,6 +262,7 @@ body,html{
       width: 100%;
       text-align: center;
     }
+
   }
   
   @media screen and (max-width:600px){
@@ -221,6 +270,24 @@ body,html{
       width:100%;
     } */
     
+  }
+  
+  @media screen and (max-width:768px) {
+    .service-box{
+      max-width: 50%;
+    }
+  }
+  
+  @media screen and (max-width:480px) {
+    .service-box{
+      max-width: 100%;
+    }
+    .page-content img{
+      /* justify-content: center; */
+      height: 80px;
+      width: 500px;
+      margin-bottom: 20px;
+    }
   }
   
  

@@ -1,13 +1,13 @@
 import React from 'react';
+import Site from './Site'
 import Footrapp from './Footerapp'
-import Headrapp from './Headerapp';
 
 // import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Headrapp/>
+      <Site/>
       <Footrapp/>
     </div>
   );
