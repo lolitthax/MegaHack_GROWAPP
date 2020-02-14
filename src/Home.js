@@ -1,6 +1,6 @@
 import React from 'react';
-import Site from './Site'
-import Footrapp from './Footerapp'
+import Site from './components/Site'
+import Footrapp from './components/Footerapp'
 
 // import './App.css';
 

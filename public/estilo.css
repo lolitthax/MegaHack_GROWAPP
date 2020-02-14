@@ -42,7 +42,7 @@ body,html{
   }
   .page-content img{
     height: 150px;
-    width: 700px;
+    width: 100%;
     margin-bottom: 20px;
   }
   .page-content p,a{
@@ -96,6 +96,7 @@ body,html{
   }
   
   .service-box{
+    width: 400px;
     max-width: 33.33%;
     padding: 10px;
     text-align: center;
@@ -119,7 +120,7 @@ body,html{
     transform: rotate(-45deg);
     font-size: 26px;
   }
-  .service-box:hover .service-icon{
+  .service-icon:hover{
     background: #0a3d62;
     color: #ddd;
   }
@@ -284,8 +285,6 @@ body,html{
     }
     .page-content img{
       /* justify-content: center; */
-      height: 80px;
-      width: 500px;
       margin-bottom: 20px;
     }
   }
