@@ -1,6 +1,9 @@
 <?php
     header('Access-Control-Allow-Origin: *');
+    header("Access-Control-Allow-Headers: Content-Type");
     require 'connect.php';
+
+    echo $_SESSION['login'];
 
     $postdata = file_get_contents("php://input");
 

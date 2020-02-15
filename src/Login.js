@@ -50,14 +50,14 @@ export default class Login extends Component {
             <div>
                 <section className='contact-section' title='Imagem do formulário de login'>
                     <div className='content-div' title='Formulário de login'>
-                        <div className='inner-width'>
+                        <form className='inner-width' onSubmit={this.onSubmit}>
                             <img src='../Logotipo.svg' alt='logotipo da empresa' />
-                            <input type='email' className='email' placeholder='Seu e-mail' title='Campo e-mail' />
-                            <input type='password' className='password' placeholder='Senha' title='Campo senha' />
+                            <input type='email' className='email' placeholder='Seu e-mail' title='Campo e-mail' value={this.state.email} onChange={this.onChangeEmail} required/>
+                            <input type='password' className='password' placeholder='Senha' title='Campo senha' value={this.state.senha} onChange={this.onChangeSenha} required/>
                             <button className='button-submit' type='submit' title='Botão para enviar'>Entrar</button>
                             <a href='/cadastro' title='Quero me cadastrar'>Quero me cadastrar</a>
                             <a href='/senha' title='Esqueci a senha'>Esqueci a senha</a>
-                        </div>
+                        </form>
                     </div>
                 </section>
             </div>

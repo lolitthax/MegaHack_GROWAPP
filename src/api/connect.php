@@ -1,4 +1,7 @@
 <?php
+    header('Access-Control-Allow-Origin: *');
+    header("Access-Control-Allow-Headers: Content-Type");
+    
     function connect() {
         $host = 'localhost';
         $dbname = 'growapp';
