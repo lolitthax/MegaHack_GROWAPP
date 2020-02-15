@@ -19,7 +19,7 @@
 
         if($row != null) {
             $_SESSION['login'] = $row['idUsuario'];
-            header('Location: teste.php');
+            // header('Location: teste.php');
         } else {
             echo "Erro no Login";
         }
