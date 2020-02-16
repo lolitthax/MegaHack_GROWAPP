@@ -14,7 +14,7 @@ const Site = props => {
     
         </p>
           <a href='/cadastro' className='button-sign' title='cadastrar-se'>Cadastre-se</a>
-          <p>Já possui uma conta? <a href='/login' title='Fazer login'>Faça seu login.</a></p>
+          <p>Já possui uma conta? <a href='/painel' title='Fazer login'>Faça seu login.</a></p>
         </div>
       </section>
       <Primary/>
